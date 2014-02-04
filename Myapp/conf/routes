@@ -14,28 +14,28 @@ GET     /public/                                staticDir:public
 *       /{controller}/{action}                  {controller}.{action}
 
 # UsuariosJson page
-GET /usuariosJson 								    Application.usuariosJson
+GET /usuariosJson 								Application.usuariosJson
 
 # Posts Page 
-GET /users 								    Application.users
+GET /users 								   		Application.users
 
 # Show Page 
-GET /show/{<[0-9]+>id} 								    Application.show
+GET /show/{<[0-9]+>id} 							Application.show
 
 # Get Captcha
 GET /captcha                                    Application.captcha
 
 # Get Tags
-GET     /show/{tag}                    Application.listTagged
+GET     /show/{tag}                    			Application.listTagged
 
 # Administration
 GET     /admin/?                                Admin.index
 *       /admin                                  module:crud
-GET     /admin/form/{id}                 Admin.form
-GET     /admin/new                          Admin.form
+GET     /admin/form/{id}                 		Admin.form
+GET     /admin/new                          	Admin.form
 
 
 
 # Import Secure routes
-*       /                                       module:secure
+*/                                       		module:secure
 /login 											Secure.login

@@ -16,23 +16,20 @@
             <div id="logo">
                 YABE
             </div>
-            <ul id="tools">
-            	
-            		 <li>
-                    	<a href="@{Secure.logout()}">Log out</a>
-                	</li>	                            			   
+            <ul id="tools"> 
+	                 <li>
+				        <a href="@{Admin.index()}">Entre para escrever algo</a>
+				    </li>               			   
 			    
 			</ul>
            <div id="title">
 			    <span class="about">Sobre esse blog</span>
-			    <h1><a href="@{Application.users()}">${blogTitle}</a></h1>
+			    <h1><a href="">${blogTitle}</a></h1>
 			    <h2>${blogBaseline}</h2>
 			</div>
         </div>
         
-        <div id="main">
-            #{doLayout /} 
-        </div>
+       
         
         <p id="footer">
             Play framework � massa

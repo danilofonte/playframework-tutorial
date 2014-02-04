@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<testsuite failures="0" time="2.777" errors="0" skipped="0" tests="6" name="UserTest">
-  <testcase classname="UserTest" name="relacaoDeComentarios" time="0.509">
+<testsuite failures="0" time="2.139" errors="0" skipped="0" tests="6" name="UserTest">
+  <testcase classname="UserTest" name="criaRetornaUser" time="0.288">
       </testcase>
-  <testcase classname="UserTest" name="testTags" time="0.488">
+  <testcase classname="UserTest" name="tentaConectarUser" time="0.345">
       </testcase>
-  <testcase classname="UserTest" name="criaRetornaUser" time="0.408">
+  <testcase classname="UserTest" name="createPost" time="0.384">
       </testcase>
-  <testcase classname="UserTest" name="testaComentarios" time="0.4">
+  <testcase classname="UserTest" name="testaComentarios" time="0.35">
       </testcase>
-  <testcase classname="UserTest" name="tentaConectarUser" time="0.57">
+  <testcase classname="UserTest" name="relacaoDeComentarios" time="0.38">
       </testcase>
-  <testcase classname="UserTest" name="createPost" time="0.402">
+  <testcase classname="UserTest" name="testTags" time="0.392">
       </testcase>
 </testsuite>

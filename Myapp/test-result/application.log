@@ -36,3 +36,548 @@ play.exceptions.CompilationException: The type Check is already defined
 04 Fev 2014 15:36:47,866 ERROR ~ Invalid route definition : /login Secure.login
 04 Fev 2014 15:36:51,712 INFO  ~ Connected to jdbc:mysql://localhost/myapp?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
 04 Fev 2014 15:36:55,427 INFO  ~ Application 'myapp' is now started !
+04 Fev 2014 15:43:46,338 ERROR ~ 
+
+@6h6f13k0p
+Internal Server Error (500) for request GET /admin/index
+
+Execution exception (In /app/controllers/Admin.java around line 20)
+NullPointerException occured : Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+
+play.exceptions.JavaExecutionException: Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:237)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:213)
+	at controllers.Admin.setConnectedUser(Admin.java:20)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:510)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.handleBefores(ActionInvoker.java:328)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:142)
+	... 1 more
+04 Fev 2014 15:43:58,044 ERROR ~ 
+
+@6h6f13k10
+Internal Server Error (500) for request GET /admin/index
+
+Execution exception (In /app/controllers/Admin.java around line 20)
+NullPointerException occured : Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+
+play.exceptions.JavaExecutionException: Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:237)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:213)
+	at controllers.Admin.setConnectedUser(Admin.java:20)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:510)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.handleBefores(ActionInvoker.java:328)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:142)
+	... 1 more
+04 Fev 2014 15:44:16,125 ERROR ~ 
+
+@6h6f13k11
+Internal Server Error (500) for request GET /admin/index
+
+Execution exception (In /app/controllers/Admin.java around line 20)
+NullPointerException occured : Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+
+play.exceptions.JavaExecutionException: Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:237)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:213)
+	at controllers.Admin.setConnectedUser(Admin.java:20)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:510)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.handleBefores(ActionInvoker.java:328)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:142)
+	... 1 more
+04 Fev 2014 15:46:05,193 ERROR ~ 
+
+@6h6f13k12
+Internal Server Error (500) for request GET /admin/index
+
+Execution exception (In /app/controllers/Admin.java around line 20)
+NullPointerException occured : Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+
+play.exceptions.JavaExecutionException: Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:237)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:213)
+	at controllers.Admin.setConnectedUser(Admin.java:20)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:510)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.handleBefores(ActionInvoker.java:328)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:142)
+	... 1 more
+04 Fev 2014 15:46:17,459 ERROR ~ 
+
+@6h6f13k13
+Internal Server Error (500) for request GET /admin
+
+Execution exception (In /app/controllers/Admin.java around line 20)
+NullPointerException occured : Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+
+play.exceptions.JavaExecutionException: Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:237)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:213)
+	at controllers.Admin.setConnectedUser(Admin.java:20)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:510)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.handleBefores(ActionInvoker.java:328)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:142)
+	... 1 more
+04 Fev 2014 15:46:19,454 ERROR ~ 
+
+@6h6f13k14
+Internal Server Error (500) for request GET /admin
+
+Execution exception (In /app/controllers/Admin.java around line 20)
+NullPointerException occured : Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+
+play.exceptions.JavaExecutionException: Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:237)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:213)
+	at controllers.Admin.setConnectedUser(Admin.java:20)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:510)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.handleBefores(ActionInvoker.java:328)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:142)
+	... 1 more
+04 Fev 2014 15:46:25,661 ERROR ~ 
+
+@6h6f13k15
+Internal Server Error (500) for request GET /admin/index
+
+Execution exception (In /app/controllers/Admin.java around line 20)
+NullPointerException occured : Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+
+play.exceptions.JavaExecutionException: Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:237)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:213)
+	at controllers.Admin.setConnectedUser(Admin.java:20)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:510)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.handleBefores(ActionInvoker.java:328)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:142)
+	... 1 more
+04 Fev 2014 15:48:40,455 ERROR ~ 
+
+@6h6f13k19
+Internal Server Error (500) for request GET /admin/index
+
+Execution exception (In /app/controllers/Admin.java around line 20)
+NullPointerException occured : Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+
+play.exceptions.JavaExecutionException: Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:237)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:213)
+	at controllers.Admin.setConnectedUser(Admin.java:20)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:510)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.handleBefores(ActionInvoker.java:328)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:142)
+	... 1 more
+04 Fev 2014 15:49:40,227 ERROR ~ 
+
+@6h6f13k1a
+Internal Server Error (500) for request GET /admin/index
+
+Execution exception (In /app/controllers/Admin.java around line 20)
+NullPointerException occured : Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+
+play.exceptions.JavaExecutionException: Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:237)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:213)
+	at controllers.Admin.setConnectedUser(Admin.java:20)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:510)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.handleBefores(ActionInvoker.java:328)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:142)
+	... 1 more
+04 Fev 2014 15:55:47,595 ERROR ~ 
+
+@6h6f13k1b
+Internal Server Error (500) for request GET /admin/index
+
+Execution exception (In /app/controllers/Admin.java around line 20)
+NullPointerException occured : Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+
+play.exceptions.JavaExecutionException: Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:237)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read name on null object models.User (controllers.Admin.setConnectedUser, line 20)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:213)
+	at controllers.Admin.setConnectedUser(Admin.java:20)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:510)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.handleBefores(ActionInvoker.java:328)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:142)
+	... 1 more
+04 Fev 2014 15:57:20,199 ERROR ~ Invalid route definition : */ module:secure
+04 Fev 2014 15:57:20,199 ERROR ~ Invalid route definition : /login Secure.login
+04 Fev 2014 15:57:20,681 ERROR ~ Invalid route definition : */ module:secure
+04 Fev 2014 15:57:20,681 ERROR ~ Invalid route definition : /login Secure.login
+04 Fev 2014 16:03:47,557 ERROR ~ Invalid route definition : */ module:secure
+04 Fev 2014 16:03:47,558 ERROR ~ Invalid route definition : /login Secure.login
+04 Fev 2014 16:05:10,595 ERROR ~ Invalid route definition : */ module:secure
+04 Fev 2014 16:05:10,595 ERROR ~ Invalid route definition : /login Secure.login
+04 Fev 2014 16:05:38,524 ERROR ~ Invalid route definition : */ module:secure
+04 Fev 2014 16:05:38,524 ERROR ~ Invalid route definition : /login Secure.login
+04 Fev 2014 16:10:59,857 ERROR ~ Invalid route definition : */ module:secure
+04 Fev 2014 16:10:59,857 ERROR ~ Invalid route definition : /login Secure.login
+04 Fev 2014 16:17:27,245 ERROR ~ 
+
+@6h6f13k4c
+Internal Server Error (500) for request GET /application/users
+
+No route found (In /app/views/main.html around line 20)
+No route able to invoke action Security.isConnected was found.
+
+play.exceptions.NoRouteFoundException: No route found
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:82)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:282)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:202)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:662)
+	at play.mvc.Controller.renderTemplate(Controller.java:642)
+	at play.mvc.Controller.render(Controller.java:699)
+	at controllers.Application.users(Application.java:32)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+04 Fev 2014 16:19:40,885 ERROR ~ Invalid route definition : */ module:secure
+04 Fev 2014 16:19:40,885 ERROR ~ Invalid route definition : /login Secure.login
+04 Fev 2014 16:19:40,886 ERROR ~ Invalid route definition : /connectedOn Security.connectedOn
+04 Fev 2014 16:19:41,227 ERROR ~ Invalid route definition : */ module:secure
+04 Fev 2014 16:19:41,228 ERROR ~ Invalid route definition : /login Secure.login
+04 Fev 2014 16:19:41,228 ERROR ~ Invalid route definition : /connectedOn Security.connectedOn
+04 Fev 2014 16:19:44,807 ERROR ~ 
+
+@6h6f13k4f
+Internal Server Error (500) for request GET /application/users
+
+No route found (In /app/views/main.html around line 20)
+No route able to invoke action Security.isConnected was found.
+
+play.exceptions.NoRouteFoundException: No route found
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:82)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:282)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:202)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:662)
+	at play.mvc.Controller.renderTemplate(Controller.java:642)
+	at play.mvc.Controller.render(Controller.java:699)
+	at controllers.Application.users(Application.java:32)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+04 Fev 2014 16:19:59,941 ERROR ~ 
+
+@6h6f13k4i
+Internal Server Error (500) for request GET /application/users
+
+No route found (In /app/views/main.html around line 20)
+No route able to invoke action Security.connectedOn was found.
+
+play.exceptions.NoRouteFoundException: No route found
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:82)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:282)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:202)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:662)
+	at play.mvc.Controller.renderTemplate(Controller.java:642)
+	at play.mvc.Controller.render(Controller.java:699)
+	at controllers.Application.users(Application.java:32)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+04 Fev 2014 16:20:01,436 ERROR ~ 
+
+@6h6f13k4l
+Internal Server Error (500) for request GET /application/users
+
+No route found (In /app/views/main.html around line 20)
+No route able to invoke action Security.connectedOn was found.
+
+play.exceptions.NoRouteFoundException: No route found
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:82)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:282)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:202)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:662)
+	at play.mvc.Controller.renderTemplate(Controller.java:642)
+	at play.mvc.Controller.render(Controller.java:699)
+	at controllers.Application.users(Application.java:32)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+04 Fev 2014 16:20:35,836 ERROR ~ 
+
+@6h6f13k4o
+Internal Server Error (500) for request GET /application/users
+
+No route found (In /app/views/main.html around line 20)
+No route able to invoke action Application.connectedOn was found.
+
+play.exceptions.NoRouteFoundException: No route found
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:82)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:282)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:202)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:662)
+	at play.mvc.Controller.renderTemplate(Controller.java:642)
+	at play.mvc.Controller.render(Controller.java:699)
+	at controllers.Application.users(Application.java:32)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+04 Fev 2014 16:21:07,933 ERROR ~ Invalid route definition : */ module:secure
+04 Fev 2014 16:21:07,933 ERROR ~ Invalid route definition : /login Secure.login
+04 Fev 2014 16:21:07,933 ERROR ~ Invalid route definition : /security/connectedOn Security.connectedOn
+04 Fev 2014 16:21:08,009 ERROR ~ 
+
+@6h6f13k51
+Internal Server Error (500) for request GET /application/users
+
+No route found (In /app/views/main.html around line 20)
+No route able to invoke action Security.connectedOn was found.
+
+play.exceptions.NoRouteFoundException: No route found
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:82)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:282)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:202)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:662)
+	at play.mvc.Controller.renderTemplate(Controller.java:642)
+	at play.mvc.Controller.render(Controller.java:699)
+	at controllers.Application.users(Application.java:32)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+04 Fev 2014 16:21:16,050 ERROR ~ 
+
+@6h6f13k54
+Internal Server Error (500) for request GET /application/users
+
+No route found (In /app/views/main.html around line 20)
+No route able to invoke action security.connectedOn was found.
+
+play.exceptions.NoRouteFoundException: No route found
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:82)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:282)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:202)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:662)
+	at play.mvc.Controller.renderTemplate(Controller.java:642)
+	at play.mvc.Controller.render(Controller.java:699)
+	at controllers.Application.users(Application.java:32)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+04 Fev 2014 16:21:18,561 ERROR ~ 
+
+@6h6f13k57
+Internal Server Error (500) for request GET /application/users
+
+No route found (In /app/views/main.html around line 20)
+No route able to invoke action security.connectedOn was found.
+
+play.exceptions.NoRouteFoundException: No route found
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:82)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:282)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:202)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:662)
+	at play.mvc.Controller.renderTemplate(Controller.java:642)
+	at play.mvc.Controller.render(Controller.java:699)
+	at controllers.Application.users(Application.java:32)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+04 Fev 2014 16:21:57,080 ERROR ~ 
+
+@6h6f13k5a
+Internal Server Error (500) for request GET /application/users
+
+No route found (In /app/views/main.html around line 20)
+No route able to invoke action Secure.connectedOn was found.
+
+play.exceptions.NoRouteFoundException: No route found
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:82)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:282)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:202)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:662)
+	at play.mvc.Controller.renderTemplate(Controller.java:642)
+	at play.mvc.Controller.render(Controller.java:699)
+	at controllers.Application.users(Application.java:32)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+04 Fev 2014 16:23:54,279 ERROR ~ Invalid route definition : */ module:secure
+04 Fev 2014 16:23:54,279 ERROR ~ Invalid route definition : /login Secure.login
+04 Fev 2014 16:23:54,279 ERROR ~ Invalid route definition : /connected Application.connected
+04 Fev 2014 16:23:54,632 ERROR ~ Invalid route definition : */ module:secure
+04 Fev 2014 16:23:54,632 ERROR ~ Invalid route definition : /login Secure.login
+04 Fev 2014 16:23:54,632 ERROR ~ Invalid route definition : /connected Application.connected
+04 Fev 2014 16:24:47,146 ERROR ~ 
+
+@6h6f13k5b
+application.posts action not found
+
+Action not found
+Action application.posts could not be found. Error raised is No method public static void posts() was found in class controllers.application
+
+play.exceptions.ActionNotFoundException: Action application.posts not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:610)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:85)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: No method public static void posts() was found in class controllers.application
+	... 3 more
+04 Fev 2014 16:25:17,447 ERROR ~ 
+
+@6h6f13k5c
+Internal Server Error (500) for request GET /application/users
+
+Template compilation error (In /app/views/main.html around line 20)
+The template /app/views/main.html does not compile : unexpected token: @ 
+
+play.exceptions.TemplateCompilationException: unexpected token: @ 
+	at play.templates.GroovyTemplate.compile(GroovyTemplate.java:189)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:210)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:282)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:202)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:662)
+	at play.mvc.Controller.renderTemplate(Controller.java:642)
+	at play.mvc.Controller.render(Controller.java:699)
+	at controllers.Application.users(Application.java:36)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+04 Fev 2014 16:27:03,513 ERROR ~ 
+
+@6h6f13k5d
+Internal Server Error (500) for request GET /application/users
+
+Template compilation error (In /app/views/main.html around line 20)
+The template /app/views/main.html does not compile : unable to resolve class connected , unable to find class for annotation  
+
+play.exceptions.TemplateCompilationException: unable to resolve class connected , unable to find class for annotation
+ 
+	at play.templates.GroovyTemplate.compile(GroovyTemplate.java:189)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:210)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:282)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:202)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:662)
+	at play.mvc.Controller.renderTemplate(Controller.java:642)
+	at play.mvc.Controller.render(Controller.java:699)
+	at controllers.Application.users(Application.java:36)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+04 Fev 2014 16:29:06,648 ERROR ~ Invalid route definition : */ module:secure
+04 Fev 2014 16:29:06,648 ERROR ~ Invalid route definition : /login Secure.login
+04 Fev 2014 16:29:06,648 ERROR ~ Invalid route definition : /connected Application.connected
+04 Fev 2014 16:29:09,883 ERROR ~ 
+
+@6h6f13k5e
+Internal Server Error (500) for request GET /application/users
+
+Template compilation error (In /app/views/main.html around line 20)
+The template /app/views/main.html does not compile : unexpected token: as 
+
+play.exceptions.TemplateCompilationException: unexpected token: as 
+	at play.templates.GroovyTemplate.compile(GroovyTemplate.java:189)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:210)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:282)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:202)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:662)
+	at play.mvc.Controller.renderTemplate(Controller.java:642)
+	at play.mvc.Controller.render(Controller.java:699)
+	at controllers.Application.users(Application.java:36)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)

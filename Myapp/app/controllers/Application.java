@@ -5,6 +5,7 @@ import java.util.List;
 import com.sun.xml.internal.ws.developer.MemberSubmissionAddressing.Validation;
 
 import models.Post;
+import models.User;
 import play.Play;
 import play.cache.Cache;
 import play.data.validation.Required;
@@ -19,12 +20,29 @@ public class Application extends Controller {
 	static void addDefaults() {
 		renderArgs.put("blogTitle", Play.configuration.getProperty("blog.title"));
 		renderArgs.put("blogBaseline", Play.configuration.getProperty("blog.baseline"));
+		if (Security.isConnected()) {
+			User user = User.find("byEmail", Security.connected()).first();
+			renderArgs.put("user", user.name);
+		}
 	}
+	
+	public static void index(){
+		List<Post> posts = Post.findAll();
+		render(posts);
+	}
+	
 
-	public static void users() {
+
+	public static void users() {		
 		Post frontPost = Post.find("order by postedAt desc").first();
-		List<Post> olderPosts = Post.find("order by postedAt desc").from(1).fetch(10);
-		render(frontPost, olderPosts);
+		List<Post> olderPosts = Post.find("order by postedAt desc").from(1).fetch(10);		
+		render(frontPost, olderPosts);		
+	}
+	
+	public static void myposts(){
+		String user = Security.connected();
+		List<Post> posts = Post.find("author.email", user).fetch();
+		render(posts);
 	}
 
 	public static void show(Long id) {

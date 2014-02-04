@@ -23,8 +23,15 @@ public class Admin extends Controller {
 
 	public static void index() {
 		String user = Security.connected();
-		List<Post> posts = Post.find("author.email", user).fetch();
-		render(posts);
+		User userProfile = User.find("byEmail", Security.connected()).first();
+		String admin = userProfile.isAdmin == true ? "Admin" : "noAdmin";
+		if (userProfile.isAdmin) {
+			List<Post> posts = Post.find("author.email", user).fetch();
+			render(posts);
+		}
+		else {
+			Application.myposts();
+		}
 	}
 
 	public static void form(Long id) {
@@ -35,34 +42,34 @@ public class Admin extends Controller {
 		render();
 	}
 
-	public static void save(Long id,String title, String content, String tags) {
+	public static void save(Long id, String title, String content, String tags) {
 		Post post;
-	    if(id == null) {
-	        // Create post
-	        User author = User.find("byEmail", Security.connected()).first();
-	        post = new Post(title, new Date(), content, author);
-	    } else {
-	        // Retrieve post
-	        post = Post.findById(id);
-	        // Edit
-	        post.title = title;
-	        post.content = content;
-	        post.tags.clear();
-	    }
-	    // Set tags list
-	    for(String tag : tags.split("\\s+")) {
-	        if(tag.trim().length() > 0) {
-	            post.tags.add(Tag.criaEBuscaPorNome(tag));
-	        }
-	    }
-	    // Validate
-	    validation.valid(post);
-	    if(validation.hasErrors()) {
-	        render("@form", post);
-	    }
-	    // Save
-	    post.save();
-	    index();
+		if (id == null) {
+			// Create post
+			User author = User.find("byEmail", Security.connected()).first();
+			post = new Post(title, new Date(), content, author);
+		} else {
+			// Retrieve post
+			post = Post.findById(id);
+			// Edit
+			post.title = title;
+			post.content = content;
+			post.tags.clear();
+		}
+		// Set tags list
+		for (String tag : tags.split("\\s+")) {
+			if (tag.trim().length() > 0) {
+				post.tags.add(Tag.criaEBuscaPorNome(tag));
+			}
+		}
+		// Validate
+		validation.valid(post);
+		if (validation.hasErrors()) {
+			render("@form", post);
+		}
+		// Save
+		post.save();
+		index();
 	}
 
 }
