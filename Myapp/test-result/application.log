@@ -1,10 +1,38 @@
-04 Fev 2014 14:25:01,756 INFO  ~ Starting /home/danilo/workspace/Myapp
-04 Fev 2014 14:25:01,759 WARN  ~ Declaring modules in application.conf is deprecated. Use dependencies.yml instead (module.secure)
-04 Fev 2014 14:25:01,759 INFO  ~ Module secure is available (/home/danilo/play-1.2.7/modules/secure)
-04 Fev 2014 14:25:01,760 INFO  ~ Module crud is available (/home/danilo/play-1.2.7/modules/crud)
-04 Fev 2014 14:25:01,760 INFO  ~ Module secure is available (/home/danilo/play-1.2.7/modules/secure)
-04 Fev 2014 14:25:02,266 WARN  ~ You're running Play! in DEV mode
-04 Fev 2014 14:25:02,333 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
-04 Fev 2014 14:25:13,646 INFO  ~ Connected to jdbc:mysql://localhost/myapp?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
-04 Fev 2014 14:25:17,455 INFO  ~ Application 'myapp' is now started !
-04 Fev 2014 14:30:14,218 ERROR ~ Invalid route definition : /login Secure.login
+04 Fev 2014 15:36:26,805 INFO  ~ Starting /home/danilo/workspace/Myapp
+04 Fev 2014 15:36:26,808 WARN  ~ Declaring modules in application.conf is deprecated. Use dependencies.yml instead (module.secure)
+04 Fev 2014 15:36:26,808 INFO  ~ Module secure is available (/home/danilo/play-1.2.7/modules/secure)
+04 Fev 2014 15:36:26,809 INFO  ~ Module crud is available (/home/danilo/play-1.2.7/modules/crud)
+04 Fev 2014 15:36:26,809 INFO  ~ Module secure is available (/home/danilo/play-1.2.7/modules/secure)
+04 Fev 2014 15:36:27,374 WARN  ~ You're running Play! in DEV mode
+04 Fev 2014 15:36:27,444 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+04 Fev 2014 15:36:39,477 ERROR ~ 
+
+@6h6f13k0m
+Internal Server Error (500) for request GET /@tests
+
+Compilation error (In {module:secure}/app/controllers/Check.java around line 10)
+The file {module:secure}/app/controllers/Check.java could not be compiled. Error raised is : The type Check is already defined
+
+play.exceptions.CompilationException: The type Check is already defined
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:676)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:520)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:282)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:426)
+	at play.classloading.ApplicationClassloader.getAssignableClasses(ApplicationClassloader.java:455)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:247)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:401)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:247)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:202)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:48)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+04 Fev 2014 15:36:47,866 ERROR ~ Invalid route definition : /login Secure.login
+04 Fev 2014 15:36:51,712 INFO  ~ Connected to jdbc:mysql://localhost/myapp?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+04 Fev 2014 15:36:55,427 INFO  ~ Application 'myapp' is now started !
