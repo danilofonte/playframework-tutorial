@@ -1,0 +1,41 @@
+package models;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="livro")
+public class Livro {
+	
+	@Column(name="titulo")
+	private String titulo;
+	
+	@Column(name="usuario")
+	private Usuario usuario;
+
+	public Livro(String titulo, Usuario usuario) {
+		super();
+		this.titulo = titulo;
+		this.usuario = usuario;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+	
+	
+
+}

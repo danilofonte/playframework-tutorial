@@ -1,0 +1,26 @@
+import java.util.Date;
+
+import models.User;
+import models.Usuario;
+
+import org.junit.Before;
+
+import play.test.UnitTest;
+
+
+public class UserTest extends UnitTest {
+	
+private User user;
+	
+	
+	@Before
+	public void setup(){
+		user = new User("Danilo","danilosantosfonte@gmail.com","secret",true);
+	}
+	
+	@Test
+	public void createAndRetrieveUser(){
+		
+	}
+
+}

@@ -1,0 +1,7 @@
+package controllers;
+
+@With(Secure.class)
+public class Posts extends CRUD {
+	
+
+}

@@ -1,0 +1,8 @@
+#{fixture delete:'all', load:'data.yml' /}
+ 
+#{selenium}
+    // Open the home page, and check that no error occurred
+    open('/')
+    waitForPageToLoad(1000)
+    assertNotTitle('Application error')
+#{/selenium}

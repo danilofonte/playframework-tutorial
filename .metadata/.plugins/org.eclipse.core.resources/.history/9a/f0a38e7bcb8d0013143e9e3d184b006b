@@ -1,0 +1,131 @@
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+
+import models.Comment;
+import models.Post;
+import models.Tag;
+import models.User;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import play.test.Fixtures;
+import play.test.UnitTest;
+
+public class UserTest extends UnitTest {
+
+	private User user;
+
+	@Before
+	public void setup() {
+		Fixtures.deleteDatabase();
+		user = new User("Danilo", "danilosantosfonte@gmail.com", "secret", true)
+				.save();
+	}
+
+	@Test
+	public void criaRetornaUser() {
+
+		User danilo = User.find("byEmail", "danilosantosfonte@gmail.com").first();
+
+		assertNotNull(danilo);
+		assertEquals("Danilo", danilo.name);
+	}
+	
+	@Test
+	public void tentaConectarUser(){
+		assertNotNull(User.loginUser(user.email,user.password));
+		assertNull(User.loginUser("danilo.fonte@gmail.com", "1234567"));		
+	}
+	
+	@Test
+	public void createPost() {
+	    new Post("Primeiro poste",new Date(), "blablabla",user).save();
+	    
+	    assertEquals(1, Post.count());
+	    
+	    List<Post> bobPosts = Post.find("byAuthor", user).fetch();
+	    
+	    // Tests
+	    assertEquals(1, bobPosts.size());
+	    Post firstPost = bobPosts.get(0);
+	    assertNotNull(firstPost);
+	    assertEquals(user, firstPost.author);
+	    assertEquals("Primeiro poste", firstPost.title);
+	    assertEquals("blablabla", firstPost.content);
+	    assertNotNull(firstPost.postedAt);
+	}
+	
+	@Test
+	public void testaComentarios(){
+		Post post = new Post("Primeiro poste",new Date(), "blablabla",user).save();
+		
+		new Comment(post, "entendedor anonimo", "nada haver").save();
+		new Comment(post, "first", "first").save();
+		
+		List<Comment> comments = Comment.find("byPost", post).fetch();
+		Comment first = comments.get(1);
+		
+		assertEquals(2, comments.size());
+		assertNotNull(comments.get(0));
+		assertEquals("first", first.author);
+	}
+	
+	@Test
+	public void relacaoDeComentarios(){
+		Post post = new Post("Primeiro poste",new Date(), "blablabla",user).save();
+		post.addComment("entendedor anonimo", "nada haver").save();
+		post.addComment("first", "first").save();
+		
+		List<Comment> comments = Comment.find("byPost", post).fetch();
+		
+		assertEquals(1, Post.count());
+	    assertEquals(2, Comment.count());
+	 
+	    // Retrieve Bob's post
+	    post = Post.find("byAuthor", user).first();
+	    assertNotNull(post);
+	 
+	    // Navigate to comments
+	    assertEquals(2, post.comments.size());
+	    assertEquals("entendedor anonimo", post.comments.get(0).author);
+	    
+	    // Delete the post
+	    post.delete();
+	    
+	    // Check that all comments have been deleted
+	    assertEquals(1, User.count());
+	    assertEquals(0, Post.count());
+	    assertEquals(0, Comment.count());
+	}
+	
+	@Test
+	public void testTags() {
+	 
+	    // Create a new post
+	    Post daniloPost = new Post("My first post", new Date(), "Hello world", user).save();
+	    Post anotherDaniloPost = new Post("My second post", new Date(), "Hello world 2", user).save();
+	 
+	    // Well
+	    assertEquals(0, Post.findTaggedWith("Red").size());
+	 
+	    // Tag it now
+	    daniloPost.tagItWith("Red").tagItWith("Blue").save();
+	    anotherDaniloPost.tagItWith("Red").tagItWith("Green").save();
+	 
+	    // Check
+	    assertEquals(2, Post.findTaggedWith("Red").size());
+	    assertEquals(1, Post.findTaggedWith("Blue").size());
+	    assertEquals(1, Post.findTaggedWith("Green").size());
+	    List<Map> cloud = Tag.getCloud();
+	    assertEquals(
+	        "[{tag=Blue, pound=1}, {tag=Green, pound=1}, {tag=Red, pound=2}]",
+	        cloud.toString()
+	    );
+	}
+	
+	
+
+
+}

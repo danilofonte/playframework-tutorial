@@ -1,0 +1,28 @@
+package controllers;
+
+import java.util.List;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import models.Usuario;
+import play.mvc.Controller;
+
+public class Application extends Controller {
+
+    public static void index() {
+        render();
+    }
+    
+    public static void usuarios(){
+    	List<Usuario> usuarios = Usuario.findAll();
+    	render(usuarios);    	
+    }
+    
+    public static void usuariosJson(){
+    	List<Usuario> usuarios = Usuario.findAll();
+    	Gson gson = new Gson();
+    	render(gson.toJson(usuarios));
+    }
+
+}

@@ -1,0 +1,21 @@
+import java.util.Date;
+
+import models.Usuario;
+
+import org.junit.Test;
+
+import play.test.UnitTest;
+
+
+public class UsuarioTest extends UnitTest {
+	
+	@Test
+	public void tentaCriarUsuario(){
+		new Usuario("Danilo",new Date(),"195565","danilosantosfonte@gmail.com");
+		
+		assertNotNull(Usuario.pegaUsuarioPorEmail("danilosantosfonte@gmail.com"));
+		assertNull(Usuario.pegaUsuarioPorEmail("teste@teste.com.br"));
+		
+	}
+
+}

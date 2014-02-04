@@ -1,0 +1,19 @@
+package jobs;
+
+import models.Usuario;
+import play.jobs.Job;
+import play.jobs.OnApplicationStart;
+import play.test.Fixtures;
+
+@OnApplicationStart
+public class UsuarioJobs extends Job {
+ 
+    public void doJob() {
+        // Check if the database is empty
+        if(Usuario.count() == 0) {
+            Fixtures.loadModels("data.yml");
+            
+        }
+    }
+
+}

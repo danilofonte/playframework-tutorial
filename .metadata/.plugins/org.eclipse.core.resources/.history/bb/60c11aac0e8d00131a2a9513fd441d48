@@ -1,0 +1,23 @@
+package jobs;
+
+import java.util.Date;
+
+import models.Usuario;
+import play.jobs.Job;
+import play.jobs.OnApplicationStart;
+import play.test.Fixtures;
+
+@OnApplicationStart
+public class UsuarioJobs extends Job {
+ 
+    public void doJob() {
+        // Check if the database is empty
+        if(Usuario.count() == 0) {
+        	new Usuario("Danilo",new Date(),"195565","danilosantosfonte@gmail.com").save();
+        	new Usuario("Danilo",new Date(),"195565","danilosantosfonte@gmail.com").save();
+        	new Usuario("Danilo",new Date(),"195565","danilosantosfonte@gmail.com").save();
+        	new Usuario("Danilo",new Date(),"195565","danilosantosfonte@gmail.com").save();
+        }
+    }
+
+}

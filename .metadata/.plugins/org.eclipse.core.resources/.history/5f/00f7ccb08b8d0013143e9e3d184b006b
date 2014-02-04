@@ -1,0 +1,27 @@
+package models;
+
+import com.sun.xml.bind.v2.runtime.Name;
+
+import play.db.jpa.Model;
+
+public class Tag extends Model implements Comparable<Tag> {
+
+	public String name;
+
+	public Tag(String name) {
+		super();
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return name;
+	}
+
+	@Override
+	public int compareTo(Tag otherTag) {
+		// TODO Auto-generated method stub
+		return name.compareTo(otherTag.name);
+	}
+
+}

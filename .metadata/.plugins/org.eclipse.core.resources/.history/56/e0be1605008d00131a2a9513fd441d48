@@ -1,0 +1,35 @@
+package models;
+
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import play.db.jpa.Model;
+
+@Entity
+@Table(name="livro")
+public class Livro extends Model {
+	
+	@Column(name="titulo")
+	public String titulo;
+	
+	
+	@ManyToOne
+	public Usuario usuario;
+
+	public Livro(String titulo, Usuario usuario) {
+		super();
+		this.titulo = titulo;
+		this.usuario = usuario;
+	}
+
+	public List<Livro> buscaLivroPorUsuario(Usuario usuario){
+		return (List<Livro>) find("byUsuario", usuario);
+	}
+	
+	
+
+}

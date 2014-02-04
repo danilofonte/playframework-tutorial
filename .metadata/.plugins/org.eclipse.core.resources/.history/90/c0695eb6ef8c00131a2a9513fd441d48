@@ -1,0 +1,18 @@
+package controllers;
+
+import play.*;
+import play.mvc.*;
+
+import java.util.*;
+
+import com.sun.corba.se.spi.orbutil.fsm.Guard.Result;
+
+import models.*;
+
+public class Application extends Controller {
+
+    public static void index() {
+        return ok(render("Ok"));
+    }
+
+}

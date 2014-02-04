@@ -1,0 +1,35 @@
+package models;
+
+import javax.persistence.Entity;
+
+import play.db.jpa.Model;
+
+@Entity
+public class Tag extends Model implements Comparable<Tag> {
+
+	public String name;
+
+	public Tag(String name) {
+		super();
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return name;
+	}
+
+	@Override
+	public int compareTo(Tag otherTag) {
+		// TODO Auto-generated method stub
+		return name.compareTo(otherTag.name);
+	}
+
+	public static Tag criaEBuscaPorNome(String name) {
+		Tag tag = find("byName", name).first();
+		if (tag == null)
+			tag = new Tag(name);
+		return tag;
+	}
+
+}

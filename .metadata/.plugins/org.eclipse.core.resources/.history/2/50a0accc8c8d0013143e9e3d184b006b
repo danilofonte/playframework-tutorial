@@ -1,0 +1,27 @@
+package jobs;
+
+import java.util.Date;
+
+import models.Post;
+import models.User;
+
+import play.jobs.Job;
+import play.jobs.OnApplicationStart;
+
+@OnApplicationStart
+public class UserJobs extends Job {
+ 
+    public void doJob() {
+        // Check if the database is empty
+        if(User.count() == 0) {
+        	User danilo = new User("Danilo","d.fonte@f.com.br","123",true).save();
+        	
+        	Post post = new Post("titulo",new Date(),"teste",danilo).save();
+        	post.addComment("ze", "blabla");
+        	post.addComment("ninbguem", "asudsahudh");
+        	post.save();
+        	
+        }
+    }
+
+}

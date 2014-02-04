@@ -1,0 +1,6 @@
+package controllers;
+
+@With(Secure.class)
+public class Comments extends CRUD {
+
+}

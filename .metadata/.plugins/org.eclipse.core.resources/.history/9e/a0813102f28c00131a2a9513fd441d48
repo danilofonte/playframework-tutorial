@@ -1,0 +1,17 @@
+package models;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+import play.db.jpa.Model;
+
+@Entity
+public class Usuario extends Model {
+
+	@Id
+	@GeneratedValue
+	private Long id;
+	
+	private String nomeTeste;
+}

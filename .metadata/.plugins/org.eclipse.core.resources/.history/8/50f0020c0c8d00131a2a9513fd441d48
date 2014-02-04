@@ -1,0 +1,59 @@
+import java.util.Date;
+import java.util.List;
+
+import models.Post;
+import models.User;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import play.test.Fixtures;
+import play.test.UnitTest;
+
+public class UserTest extends UnitTest {
+
+	private User user;
+
+	@Before
+	public void setup() {
+		Fixtures.deleteDatabase();
+		user = new User("Danilo", "danilosantosfonte@gmail.com", "secret", true)
+				.save();
+	}
+
+	@Test
+	public void criaRetornaUser() {
+
+		User danilo = User.find("byEmail", "danilosantosfonte@gmail.com").first();
+
+		assertNotNull(danilo);
+		assertEquals("Danilo", danilo.name);
+	}
+	
+	@Test
+	public void tentaConectarUser(){
+		assertNotNull(User.loginUser(user.email,user.password));
+		assertNull(User.loginUser("danilo.fonte@gmail.com", "1234567"));		
+	}
+	
+	@Test
+	public void createPost() {
+	    new Post("Primeiro poste",new Date(), "blablabla",user).save();
+	    
+	    // Test that the post has been created
+	    assertEquals(1, Post.count());
+	    
+	    // Retrieve all posts created by Bob
+	    List<Post> bobPosts = Post.find("byAuthor", user).fetch();
+	    
+	    // Tests
+	    assertEquals(1, bobPosts.size());
+	    Post firstPost = bobPosts.get(0);
+	    assertNotNull(firstPost);
+	    assertEquals(user, firstPost.author);
+	    assertEquals("Primeiro poste", firstPost.title);
+	    assertEquals("blablabla", firstPost.content);
+	    assertNotNull(firstPost.postedAt);
+	}
+
+}

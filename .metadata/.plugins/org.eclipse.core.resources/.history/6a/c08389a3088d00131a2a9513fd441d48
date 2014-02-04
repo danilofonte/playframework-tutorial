@@ -1,0 +1,35 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#ajax").click(function(){
+		$.ajax({
+			type:"GET",
+			url:"/usuariosJson",
+			sucess: function(data){
+				alert(data);
+			},
+			erro: function(){
+				alert("erro");
+			}
+		});
+	});	
+});
+</script>
+#{list items:usuarios, as:'usuario'}
+                <div class="usuario">
+                    <h2 class="usuario-nome">
+                        ${usuario.nome}
+                    </h2>
+                    <div class="usuario-email">
+                        <span class="post-email">
+                           ${usuario.email}
+                        </span>
+                        <span class="usuario-nascimento">
+                            ${usuario.nascimento}
+                        </span>                        
+                    </div>
+                </div>
+            #{/list}
+
+<input type="button" id="ajax" value="ajaxRequest"/>

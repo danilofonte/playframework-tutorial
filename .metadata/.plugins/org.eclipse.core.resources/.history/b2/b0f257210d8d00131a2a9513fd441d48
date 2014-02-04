@@ -1,0 +1,30 @@
+package models;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import play.db.jpa.Model;
+
+@Entity
+public class User extends Model {
+	
+	public String name;
+	public String password;
+	public String email;
+	public boolean isAdmin;
+	
+	public User(String name, String password, String email, boolean isAdmin) {
+		super();
+		this.name = name;
+		this.password = password;
+		this.email = email;
+		this.isAdmin = isAdmin;
+	}
+	
+	public static User loginUser(String email, String password){
+		return find("byEmailAndPassword",email,password).first();
+	}
+	
+	
+
+}

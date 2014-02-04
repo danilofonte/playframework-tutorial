@@ -1,0 +1,21 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#ajax").click(function(){
+		$.ajax({
+			type:"GET",
+			url:"/usuariosJson",
+			sucess: function(data){
+				alert(data);
+			},
+			error: {
+				alert("erro");
+			}
+		});
+	});	
+});
+</script>
+
+<input type="button" id="ajax" value="ajaxRequest"/>
+

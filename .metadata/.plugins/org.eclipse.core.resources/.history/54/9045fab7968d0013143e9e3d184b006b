@@ -1,0 +1,10 @@
+package controllers;
+
+import java.security.Security;
+
+import play.mvc.With;
+
+@With(Secure.class)
+public class Comments extends CRUD {
+
+}

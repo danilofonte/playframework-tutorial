@@ -1,0 +1,29 @@
+import models.User;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import play.test.UnitTest;
+
+
+public class UserTest extends UnitTest {
+	
+private User user;
+	
+	
+	@Before
+	public void setup(){
+		user = new User("Danilo","danilosantosfonte@gmail.com","secret",true).save();
+	}
+	
+	@Test
+	public void createAndRetrieveUser(){
+		 // Retrieve the user with e-mail address bob@gmail.com
+	    User danilo = User.find("byEmail", "danilosantosfonte@gmail.com").first();
+	    
+	    // Test 
+	    assertNotNull(danilo);
+	    assertEquals("Danilo", danilo.name);		
+	}
+
+}

@@ -1,0 +1,8 @@
+package controllers;
+
+public class Snippet {
+	# Import CRUD routes
+	*      /admin              module:crud
+	
+}
+

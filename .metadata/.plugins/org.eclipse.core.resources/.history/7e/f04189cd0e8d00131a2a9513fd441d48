@@ -1,0 +1,23 @@
+package jobs;
+
+import models.Post;
+import models.Usuario;
+
+import org.h2.engine.User;
+
+import play.jobs.Job;
+import play.jobs.OnApplicationStart;
+
+@OnApplicationStart
+public class UsuarioJobs extends Job {
+ 
+    public void doJob() {
+        // Check if the database is empty
+        if(Usuario.count() == 0) {
+        	User danilo = new User("Danilo","d.fonte@f.com.br","123",true);
+        	Post post = new Post();
+        	
+        }
+    }
+
+}

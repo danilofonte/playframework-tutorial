@@ -1,0 +1,32 @@
+import java.util.Date;
+
+import models.Usuario;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import play.test.UnitTest;
+
+
+public class UsuarioTest extends UnitTest {
+	
+	private Usuario usuario;
+	
+	
+	@Before
+	public void setu(){
+		Usuario.removeUsuarioPorEmail("danilosantosfonte@gmail.com");
+		new Usuario("Danilo",new Date(),"195565","danilosantosfonte@gmail.com").save();
+	}
+	
+	@Test
+	public void tentaCriarUsuario(){
+		new Usuario("Danilo",new Date(),"195565","danilosantosfonte@gmail.com").save();
+		
+		assertNotNull(Usuario.pegaUsuarioPorEmail("danilosantosfonte@gmail.com"));
+		assertNull(Usuario.pegaUsuarioPorEmail("teste@teste.com.br"));		
+	}
+	
+	
+
+}

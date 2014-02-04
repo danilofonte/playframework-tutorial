@@ -1,0 +1,42 @@
+import java.util.Date;
+
+import models.Livro;
+import models.Usuario;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import play.test.UnitTest;
+
+
+public class UsuarioTest extends UnitTest {
+	
+	private Usuario usuario;
+	
+	
+	@Before
+	public void setup(){
+		usuario = new Usuario("Danilo",new Date(),"195565","danilosantosfonte@gmail.com").save();
+	}
+	
+	@Test
+	public void tentaCriarUsuario(){
+		assertNotNull(Usuario.pegaUsuarioPorEmail("danilosantosfonte@gmail.com"));
+		assertNull(Usuario.pegaUsuarioPorEmail("teste@teste.com.br"));		
+	}
+	
+	@Test
+	public void pegaLivroPorUsuario(){
+		new Livro("Novo Livro",usuario).save();
+		assertEquals(3, Livro.buscaLivroPorUsuario(usuario).size());
+		
+	}
+	
+	@After
+	public void afterTest(){		
+	}
+	
+	
+
+}
