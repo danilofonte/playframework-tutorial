@@ -1,8 +1,18 @@
 #{fixture delete:'all', load:'data.yml' /}
  
-#{selenium}
-    // Open the home page, and check that no error occurred
+#{selenium 'Check home page'}
+    clearSession()
+ 
+    // Open the home page
     open('/')
-    waitForPageToLoad(1000)
-    assertNotTitle('Application error')
+ 
+    // Check that the front post is present
+    assertTextPresent('About the model layer')
+    assertTextPresent('by Bob, 14 Jun 09')
+    assertTextPresent('2 comments , latest by Guest')
+    assertTextPresent('It is the domain-specific representation')
+ 
+    // Check older posts
+    assertTextPresent('The MVC application')
+    assertTextPresent('Just a test of YABE')
 #{/selenium}
