@@ -1,0 +1,10 @@
+04 Fev 2014 14:25:01,756 INFO  ~ Starting /home/danilo/workspace/Myapp
+04 Fev 2014 14:25:01,759 WARN  ~ Declaring modules in application.conf is deprecated. Use dependencies.yml instead (module.secure)
+04 Fev 2014 14:25:01,759 INFO  ~ Module secure is available (/home/danilo/play-1.2.7/modules/secure)
+04 Fev 2014 14:25:01,760 INFO  ~ Module crud is available (/home/danilo/play-1.2.7/modules/crud)
+04 Fev 2014 14:25:01,760 INFO  ~ Module secure is available (/home/danilo/play-1.2.7/modules/secure)
+04 Fev 2014 14:25:02,266 WARN  ~ You're running Play! in DEV mode
+04 Fev 2014 14:25:02,333 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+04 Fev 2014 14:25:13,646 INFO  ~ Connected to jdbc:mysql://localhost/myapp?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+04 Fev 2014 14:25:17,455 INFO  ~ Application 'myapp' is now started !
+04 Fev 2014 14:30:14,218 ERROR ~ Invalid route definition : /login Secure.login
