@@ -1,0 +1,28 @@
+package controllers;
+
+import models.User;
+import play.i18n.Messages;
+
+public class Security extends Secure.Security {
+
+	static void onDisconnected() {
+		Application.index();
+	}
+	
+	static void onDisconnect(){
+		Application.index();
+	}
+
+	static void onAuthenticated() {
+		Admin.main();
+	}
+	
+	static boolean isConnected(){
+		return session.contains("email");
+	}
+
+	public static boolean authenticate(User user) {
+		return User.connect(user.email, user.password);	
+	}
+
+}

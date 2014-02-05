@@ -1,0 +1,26 @@
+package models;
+
+import javax.persistence.Entity;
+
+import org.mindrot.jbcrypt.BCrypt;
+
+import play.data.validation.Email;
+import play.data.validation.Required;
+import play.db.jpa.Model;
+import play.i18n.Messages;
+
+@Entity
+public class Usuario extends Model {
+	
+	@Required(message = "&{'email.required'}")
+	@Email(message = "&{'email.valido'}")	
+	public String email;
+	
+	@Required(message = "&{'password.required'}")
+	public String password;
+	
+	public static boolean connect(String email, String password){
+		return find("byEmailAndPassword", email, BCrypt.hashpw(password, BCrypt.gensalt())).first() != null ? true : false;
+	}
+
+}

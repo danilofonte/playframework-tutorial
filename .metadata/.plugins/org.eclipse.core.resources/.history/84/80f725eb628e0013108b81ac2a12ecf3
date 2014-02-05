@@ -1,0 +1,27 @@
+import javax.validation.constraints.AssertTrue;
+
+import org.junit.*;
+import play.test.*;
+import play.mvc.*;
+import play.mvc.Http.*;
+import models.*;
+
+public class ApplicationTest extends FunctionalTest {
+
+    @Test
+    public void testThatIndexPageWorks() {
+        Response response = GET("/");
+        assertIsOk(response);
+        assertContentType("text/html", response);
+        assertCharset(play.Play.defaultWebEncoding, response);
+    }
+    
+    @Test
+    public void testUserInsert(){
+    	Usuario.create(new Usuario("danilosantosfonte@gmail.com","123456"));
+    	
+    	assertTrue(Usuario.connect("danilosantosfonte@gmail.com", "123456"));    	
+    	//assertFalse(Usuario.create(new Usuario("danilosantosfonte@gmail.com","1234567")));
+    }
+    
+}

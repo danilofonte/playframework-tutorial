@@ -1,0 +1,9 @@
+package unit;
+
+import play.test.UnitTest;
+
+public class UsuarioTest extends UnitTest {
+
+	
+	
+}

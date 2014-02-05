@@ -1,0 +1,29 @@
+package controllers;
+
+import play.*;
+import play.i18n.Messages;
+import play.mvc.*;
+import play.mvc.Scope.Flash;
+
+import java.util.*;
+
+import models.*;
+
+public class Application extends Controller {
+
+    public static void index() {
+        render();
+    }
+    
+    public static void login(Usuario usuario){
+    	if (Usuario.connect(usuario.email, usuario.password))
+    		Application.main();
+    	else
+    		flash.error(Messages.get("erro.login"), usuario);
+    }
+    
+    public static void main(){
+    	render();
+    }
+
+}

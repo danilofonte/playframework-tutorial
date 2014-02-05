@@ -1,0 +1,10 @@
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+
+erro.login = Usuário e/ou senha inválidos
+cadastro = Novo Usuário
+inserir = Inserir
+email.required = Email é obrigatório
+email.valido = O email não é válido
+password.required = Password é obrigatório

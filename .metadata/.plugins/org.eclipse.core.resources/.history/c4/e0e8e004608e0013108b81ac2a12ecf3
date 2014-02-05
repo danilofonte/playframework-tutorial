@@ -1,0 +1,43 @@
+package models;
+
+import javax.persistence.Entity;
+
+import org.mindrot.jbcrypt.BCrypt;
+
+import play.data.validation.Check;
+import play.data.validation.CheckWith;
+import play.data.validation.Email;
+import play.data.validation.Required;
+import play.db.jpa.Model;
+import play.i18n.Messages;
+
+@Entity
+public class Usuario extends Model {
+	
+	@Required(message = "&{'email.required'}")
+	@Email(message = "&{'email.valido'}")	
+	@CheckWith(EmailNotEquals.class)
+	public String email;
+	
+	@Required(message = "&{'password.required'}")
+	public String password;
+	
+	public static boolean connect(String email, String password){
+		String hashPassword = BCrypt.hashpw(password, BCrypt.gensalt());
+		return find("byEmailAndPassword", email, hashPassword).first() != null ? true : false;
+	}
+	
+	static class EmailNotEquals extends Check {		
+		@Override
+		public boolean isSatisfied(Object validatedObject, Object email) {
+			setMessage(Messages.get("email.utilizado"), email.toString());
+			return Usuario.find("byEmail", email).first() == null ? true : false;
+		}
+	}
+	
+	public static void create(Usuario usuario){
+		usuario.password = BCrypt.hashpw(usuario.password, BCrypt.gensalt());
+		usuario.save();
+	}
+
+}

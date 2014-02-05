@@ -1,0 +1,31 @@
+package functional;
+
+import java.util.Map;
+
+import models.User;
+
+import org.apache.commons.collections.map.HashedMap;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import play.test.Fixtures;
+import play.test.FunctionalTest;
+
+public class UserTest extends FunctionalTest {
+	
+	private static Map<String,String> param;
+	
+	@BeforeClass
+	public void init(){
+		Fixtures.delete(User.class);
+		param = new HashedMap();
+		param.put("user.email", "danilosantosfonte@gmail.com");
+		param.put("user.password", "123456");
+	}
+	
+	@Test
+	public void testLoginRequest(){
+		
+	}
+
+}

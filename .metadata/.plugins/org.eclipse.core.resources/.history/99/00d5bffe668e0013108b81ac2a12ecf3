@@ -1,0 +1,48 @@
+package unit;
+
+import org.junit.Test;
+
+import models.Usuario;
+import play.data.validation.Validation;
+import play.test.UnitTest;
+
+public class UsuarioTest extends UnitTest {
+
+	
+	@Test
+	public void naoDeveSalvarSemEmail() {
+		
+		Usuario usuario = criarUsuario();
+		usuario.email = null;
+		assertFalse(usuario.validateAndSave());
+	}
+	
+	@Test
+	public void naoDeveSalvarSemSenha() {
+		
+		Usuario usuario = criarUsuario();
+		usuario.password = null;
+		assertFalse(usuario.validateAndSave());
+	}
+	
+	@Test
+	public void deveSalvar() {
+
+		Usuario usuario = criarUsuario();
+		usuario.email = "usuariosalvo@test.com";
+		boolean test = usuario.validateAndSave();
+		assertTrue(test);
+	}
+	
+	@Test
+	public void naoDeveSalvarComEmailRepetido() {
+		
+	}
+	
+	
+	private Usuario criarUsuario() {
+		
+		Usuario usuario = new Usuario("joaosilva@test.com", "123");
+		return usuario;
+	}
+}

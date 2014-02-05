@@ -1,0 +1,402 @@
+05 Fev 2014 10:30:35,935 INFO  ~ Starting /home/danilo/workspace/controleAcesso
+05 Fev 2014 10:30:35,939 INFO  ~ Module secure is available (/home/danilo/play-1.2.7/modules/secure)
+05 Fev 2014 10:30:36,472 WARN  ~ You're running Play! in DEV mode
+05 Fev 2014 10:30:36,547 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+05 Fev 2014 10:30:47,270 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 10:30:50,439 INFO  ~ Connected to jdbc:mysql://localhost/controleAcesso?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+05 Fev 2014 10:30:51,159 INFO  ~ Application 'S' is now started !
+05 Fev 2014 11:04:08,082 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 11:07:22,826 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 11:10:12,098 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 11:10:22,398 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 11:10:30,683 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 11:11:30,282 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 11:12:49,557 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 11:14:55,461 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 11:17:32,338 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 11:17:48,347 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 11:22:02,905 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 11:45:44,014 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 11:47:49,880 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 13:28:33,428 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 13:28:33,636 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 13:28:34,320 ERROR ~ 
+
+@6h6kk21b3
+Internal Server Error (500) for request GET /
+
+No route found (In /app/views/Application/index.html around line 7)
+No route able to invoke action Application.login was found.
+
+play.exceptions.NoRouteFoundException: No route found
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:82)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:202)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:662)
+	at play.mvc.Controller.renderTemplate(Controller.java:642)
+	at play.mvc.Controller.render(Controller.java:699)
+	at controllers.Application.index(Application.java:16)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+05 Fev 2014 13:29:33,815 ERROR ~ 
+
+@6h6kk21b6
+Internal Server Error (500) for request GET /
+
+No route found (In /app/views/Application/index.html around line 7)
+No route able to invoke action Application.authenticate was found.
+
+play.exceptions.NoRouteFoundException: No route found
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:82)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:202)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:662)
+	at play.mvc.Controller.renderTemplate(Controller.java:642)
+	at play.mvc.Controller.render(Controller.java:699)
+	at controllers.Application.index(Application.java:16)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+05 Fev 2014 13:31:42,993 ERROR ~ 
+
+@6h6kk21b9
+Internal Server Error (500) for request GET /
+
+No route found (In /app/views/Application/index.html around line 7)
+No route able to invoke action Security.authenticate was found.
+
+play.exceptions.NoRouteFoundException: No route found
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:82)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:202)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:662)
+	at play.mvc.Controller.renderTemplate(Controller.java:642)
+	at play.mvc.Controller.render(Controller.java:699)
+	at controllers.Application.index(Application.java:16)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+05 Fev 2014 13:32:21,319 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 13:32:21,322 ERROR ~ 
+
+@6h6kk21ba
+Security.authenticate action not found
+
+Action not found
+Action Security.authenticate could not be found. Error raised is No method public static void authenticate() was found in class controllers.Security
+
+play.exceptions.ActionNotFoundException: Action Security.authenticate not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:610)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:85)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: No method public static void authenticate() was found in class controllers.Security
+	... 3 more
+05 Fev 2014 13:33:08,832 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 13:33:08,981 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 13:35:55,480 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 13:36:31,300 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 13:39:07,018 ERROR ~ 
+
+@6h6kk21bb
+Internal Server Error (500) for request POST /secure/authenticate
+
+Execution exception (In {module:secure}/app/controllers/Secure.java around line 203)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:237)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at play.utils.Java.invokeStaticOrParent(Java.java:149)
+	at play.utils.Java.invokeChildOrStatic(Java.java:184)
+	at controllers.Secure$Security.invoke(Secure.java:203)
+	at controllers.Secure$Security.access$0(Secure.java:200)
+	at controllers.Secure.authenticate(Secure.java:73)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+05 Fev 2014 13:39:50,236 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 13:39:50,236 ERROR ~ Invalid route definition : /GET /main Admin.main
+05 Fev 2014 13:41:55,624 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 13:41:55,624 ERROR ~ Invalid route definition : /GET /main Admin.main
+05 Fev 2014 13:51:01,147 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 13:51:01,147 ERROR ~ Invalid route definition : /GET /main Admin.main
+05 Fev 2014 13:51:01,625 ERROR ~ 
+
+@6h6kk21be
+Internal Server Error (500) for request GET /
+
+No route found (In {module:secure}/app/views/Secure/login.html around line 7)
+No route able to invoke action Application.authenticate was found.
+
+play.exceptions.NoRouteFoundException: No route found
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:82)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:282)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:202)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:662)
+	at play.mvc.Controller.renderTemplate(Controller.java:642)
+	at play.mvc.Controller.render(Controller.java:699)
+	at controllers.Application.index(Application.java:16)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+05 Fev 2014 13:55:20,873 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 13:55:20,873 ERROR ~ Invalid route definition : /GET /main Admin.main
+05 Fev 2014 13:55:20,874 ERROR ~ Invalid route definition : */ module:secure
+05 Fev 2014 13:55:20,874 ERROR ~ Invalid route definition : /login Secure.login
+05 Fev 2014 13:55:20,937 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 13:55:20,937 ERROR ~ Invalid route definition : /GET /main Admin.main
+05 Fev 2014 13:55:20,937 ERROR ~ Invalid route definition : */ module:secure
+05 Fev 2014 13:55:20,937 ERROR ~ Invalid route definition : /login Secure.login
+05 Fev 2014 13:55:21,443 ERROR ~ 
+
+@6h6kk21bh
+Internal Server Error (500) for request GET /
+
+No route found (In {module:secure}/app/views/Secure/login.html around line 7)
+No route able to invoke action Application.authenticate was found.
+
+play.exceptions.NoRouteFoundException: No route found
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:82)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:282)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:202)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:662)
+	at play.mvc.Controller.renderTemplate(Controller.java:642)
+	at play.mvc.Controller.render(Controller.java:699)
+	at controllers.Application.index(Application.java:16)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+05 Fev 2014 13:57:36,898 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 13:57:36,898 ERROR ~ Invalid route definition : /GET /main Admin.main
+05 Fev 2014 13:57:36,898 ERROR ~ Invalid route definition : */ module:secure
+05 Fev 2014 13:57:36,898 ERROR ~ Invalid route definition : /login Secure.login
+05 Fev 2014 13:57:37,348 ERROR ~ 
+
+@6h6kk21bk
+Internal Server Error (500) for request GET /
+
+No route found (In {module:secure}/app/views/Secure/login.html around line 7)
+No route able to invoke action Application.authenticate was found.
+
+play.exceptions.NoRouteFoundException: No route found
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:82)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:282)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:202)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:662)
+	at play.mvc.Controller.renderTemplate(Controller.java:642)
+	at play.mvc.Controller.render(Controller.java:699)
+	at controllers.Application.index(Application.java:16)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+05 Fev 2014 13:58:07,549 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 13:58:07,549 ERROR ~ Invalid route definition : /GET /main Admin.main
+05 Fev 2014 13:58:07,549 ERROR ~ Invalid route definition : */ module:secure
+05 Fev 2014 13:58:07,549 ERROR ~ Invalid route definition : /login Secure.login
+05 Fev 2014 13:58:07,550 ERROR ~ Invalid route definition : /authenticate Securi
+05 Fev 2014 13:58:10,873 ERROR ~ 
+
+@6h6kk21bl
+Internal Server Error (500) for request POST /secure/authenticate
+
+Execution exception (In {module:secure}/app/controllers/Secure.java around line 203)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:237)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at play.utils.Java.invokeStaticOrParent(Java.java:149)
+	at play.utils.Java.invokeChildOrStatic(Java.java:184)
+	at controllers.Secure$Security.invoke(Secure.java:203)
+	at controllers.Secure$Security.access$0(Secure.java:200)
+	at controllers.Secure.authenticate(Secure.java:73)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+05 Fev 2014 13:59:58,482 ERROR ~ 
+
+@6h6kk21bm
+Internal Server Error (500) for request POST /secure/authenticate
+
+Execution exception (In {module:secure}/app/controllers/Secure.java around line 203)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:237)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at play.utils.Java.invokeStaticOrParent(Java.java:149)
+	at play.utils.Java.invokeChildOrStatic(Java.java:184)
+	at controllers.Secure$Security.invoke(Secure.java:203)
+	at controllers.Secure$Security.access$0(Secure.java:200)
+	at controllers.Secure.authenticate(Secure.java:73)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+05 Fev 2014 14:00:36,473 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 14:00:36,473 ERROR ~ Invalid route definition : /GET /main Admin.main
+05 Fev 2014 14:00:36,473 ERROR ~ Invalid route definition : */ module:secure
+05 Fev 2014 14:00:36,473 ERROR ~ Invalid route definition : /login Secure.login
+05 Fev 2014 14:00:36,473 ERROR ~ Invalid route definition : /authenticate Securi
+05 Fev 2014 14:00:36,937 ERROR ~ 
+
+@6h6kk21bn
+Internal Server Error (500) for request POST /secure/authenticate
+
+Execution exception (In {module:secure}/app/controllers/Secure.java around line 203)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:237)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at play.utils.Java.invokeStaticOrParent(Java.java:149)
+	at play.utils.Java.invokeChildOrStatic(Java.java:184)
+	at controllers.Secure$Security.invoke(Secure.java:203)
+	at controllers.Secure$Security.access$0(Secure.java:200)
+	at controllers.Secure.authenticate(Secure.java:73)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+05 Fev 2014 14:01:11,487 ERROR ~ 
+
+@6h6kk21bo
+Internal Server Error (500) for request POST /secure/authenticate
+
+Execution exception (In {module:secure}/app/controllers/Secure.java around line 203)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:237)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at play.utils.Java.invokeStaticOrParent(Java.java:149)
+	at play.utils.Java.invokeChildOrStatic(Java.java:184)
+	at controllers.Secure$Security.invoke(Secure.java:203)
+	at controllers.Secure$Security.access$0(Secure.java:200)
+	at controllers.Secure.authenticate(Secure.java:73)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+05 Fev 2014 14:08:11,598 ERROR ~ 
+
+@6h6kk21bp
+Internal Server Error (500) for request POST /security/authenticate
+
+Compilation error (In /app/controllers/Security.java around line 16)
+The file /app/controllers/Security.java could not be compiled. Error raised is : The return type is incompatible with Secure.Security.isConnected()
+
+play.exceptions.CompilationException: The return type is incompatible with Secure.Security.isConnected()
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:676)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:520)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:282)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:281)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:324)
+	at play.Play.detectChanges(Play.java:632)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+05 Fev 2014 14:08:40,679 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 14:08:40,680 ERROR ~ Invalid route definition : /GET /main Admin.main
+05 Fev 2014 14:08:40,680 ERROR ~ Invalid route definition : */ module:secure
+05 Fev 2014 14:08:40,680 ERROR ~ Invalid route definition : /login Secure.login
+05 Fev 2014 14:08:40,680 ERROR ~ Invalid route definition : /authenticate Securi
+05 Fev 2014 14:11:55,158 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 14:11:55,158 ERROR ~ Invalid route definition : /GET /main Admin.main
+05 Fev 2014 14:11:55,158 ERROR ~ Invalid route definition : */ module:secure
+05 Fev 2014 14:11:55,158 ERROR ~ Invalid route definition : /login Secure.login
+05 Fev 2014 14:11:55,158 ERROR ~ Invalid route definition : /authenticate Securi
+05 Fev 2014 14:14:03,810 ERROR ~ Invalid route definition : /POST /cadastroSubmit Application.cadastroSubmit
+05 Fev 2014 14:14:03,810 ERROR ~ Invalid route definition : /GET /main Admin.main
+05 Fev 2014 14:14:03,811 ERROR ~ Invalid route definition : */ module:secure
+05 Fev 2014 14:14:03,811 ERROR ~ Invalid route definition : /login Secure.login
+05 Fev 2014 14:14:03,811 ERROR ~ Invalid route definition : /authenticate Securi
+05 Fev 2014 14:19:18,341 ERROR ~ 
+
+@6h6kk21c0
+Internal Server Error (500) for request GET /
+
+Execution exception (In /app/controllers/Application.java around line 20)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:237)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.Application.index(Application.java:20)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+05 Fev 2014 14:19:43,877 ERROR ~ 
+
+@6h6kk21c1
+Internal Server Error (500) for request GET /
+
+Execution exception (In /app/controllers/Application.java around line 20)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:237)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.Application.index(Application.java:20)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:557)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:508)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more

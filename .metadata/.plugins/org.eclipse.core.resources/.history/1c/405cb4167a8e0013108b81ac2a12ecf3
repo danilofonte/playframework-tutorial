@@ -1,0 +1,22 @@
+package controllers;
+
+import play.i18n.Messages;
+import models.User;
+
+public class Security extends Secure.Security {
+
+	static void onDisconnected() {
+		Application.index();
+	}
+
+	static void onAuthenticated() {
+		Application.main();
+	}
+
+	static boolean authenticate(User user) {
+		if (!user.connect(user.email, user.password))
+			flash.error(Messages.get("erro.login"), user);
+		return user.connect(user.email, user.password);
+	}
+
+}

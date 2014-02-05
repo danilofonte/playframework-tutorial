@@ -1,0 +1,24 @@
+package unit;
+
+import org.junit.Test;
+
+import models.Usuario;
+import play.test.UnitTest;
+
+public class UsuarioTest extends UnitTest {
+
+	
+	@Test
+	public void naoDeveSalvarSemEmail() {
+		
+		Usuario usuario = new Usuario();
+		usuario.email = null;
+		assertFalse(usuario.validateAndSave());
+	}
+	
+	@Test
+	public void naoDeveSalvarComEmailRepetido() {
+		
+	}
+	
+}

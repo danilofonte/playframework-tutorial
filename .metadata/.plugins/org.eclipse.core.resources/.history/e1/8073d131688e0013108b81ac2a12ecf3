@@ -1,0 +1,81 @@
+package unit;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import models.Usuario;
+import play.data.validation.Validation;
+import play.test.Fixtures;
+import play.test.UnitTest;
+
+public class UsuarioTest extends UnitTest {
+
+	@BeforeClass
+	public static void beforeClass() {
+		
+		Fixtures.delete(Usuario.class);
+		
+		Usuario usuarioJaExistente = criarUsuario();
+		usuarioJaExistente.email = "emailrecorrente@test.com";
+		usuarioJaExistente.save();
+		
+	}
+	
+	@Test
+	public void naoDeveSalvarSemEmail() {
+		
+		Usuario usuario = criarUsuario();
+		usuario.email = null;
+		assertFalse(usuario.validateAndSave());
+	}
+	
+	@Test
+	public void naoDeveSalvarSemSenha() {
+		
+		Usuario usuario = criarUsuario();
+		usuario.password = null;
+		assertFalse(usuario.validateAndSave());
+	}
+	
+	@Test
+	public void deveSalvar() {
+
+		Usuario usuario = criarUsuario();
+		String senha = usuario.password;
+		usuario.email = "usuariosalvo@test.com";
+		
+		assertTrue(usuario.validateAndSave());
+		assertNotNull(usuario.password);
+		assertFalse(senha.equals(usuario.password));
+	}
+	
+	@Test
+	public void naoDeveSalvarComEmailRepetido() {
+		
+		Usuario usuario = criarUsuario();
+		usuario.email = "emailrecorrente@test.com";
+		assertFalse(usuario.validateAndSave());
+	}
+	
+	
+	@Test
+	public void naoDeveAutenticarComEmailInexixtente() {
+		
+	}
+	
+	@Test
+	public void naoDeveAutenticarComSenhaIncorreta() {
+		
+	}
+	
+	@Test
+	public void deveAutenticar() {
+		
+	}
+	
+	private static Usuario criarUsuario() {
+		
+		Usuario usuario = new Usuario("joaosilva@test.com", "123");
+		return usuario;
+	}
+}

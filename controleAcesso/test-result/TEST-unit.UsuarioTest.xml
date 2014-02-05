@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<testsuite failures="0" time="0.445" errors="0" skipped="0" tests="7" name="unit.UsuarioTest">
+  <testcase classname="unit.UsuarioTest" name="naoDeveSalvarSemEmail" time="0.002">
+      </testcase>
+  <testcase classname="unit.UsuarioTest" name="naoDeveSalvarSemSenha" time="0.003">
+      </testcase>
+  <testcase classname="unit.UsuarioTest" name="deveSalvar" time="0.115">
+      </testcase>
+  <testcase classname="unit.UsuarioTest" name="naoDeveSalvarComEmailRepetido" time="0.11">
+      </testcase>
+  <testcase classname="unit.UsuarioTest" name="naoDeveAutenticarComEmailInexixtente" time="0.001">
+      </testcase>
+  <testcase classname="unit.UsuarioTest" name="naoDeveAutenticarComSenhaIncorreta" time="0">
+      </testcase>
+  <testcase classname="unit.UsuarioTest" name="deveAutenticar" time="0.214">
+      </testcase>
+</testsuite>

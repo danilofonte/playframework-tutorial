@@ -1,0 +1,18 @@
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+
+title = Titulo
+content = Conteudo
+postedAt = Postado em
+author = Autor
+post = Post relacionado
+tags = Lista de Tags
+name = Nome
+email = Email
+password = Password
+fullname= Nome Completo
+isAdmin = Administrador
+secure.username=Email:
+secure.password=Senha:
+secure.signin=entrar

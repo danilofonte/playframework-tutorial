@@ -13,8 +13,11 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="" key="selection"/>
+		<item value="secure" key="selection"/>
 		<list key="findhistory">
+			<item value="secure"/>
+			<item value="security"/>
+			<item value="locali"/>
 			<item value="ebean"/>
 		</list>
 		<list key="replacehistory">

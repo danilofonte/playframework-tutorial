@@ -1,0 +1,20 @@
+package models;
+
+import javax.persistence.Entity;
+
+import org.mindrot.jbcrypt.BCrypt;
+
+import play.db.jpa.Model;
+
+@Entity
+public class Usuario extends Model {
+	
+	public String email;
+	
+	public String password;
+	
+	public static boolean connect(String email, String password){
+		return find("byEmailAndPassword", email, BCrypt.hashpw(password, BCrypt.gensalt())).first() != null ? true : false;
+	}
+
+}

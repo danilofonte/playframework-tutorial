@@ -1,0 +1,49 @@
+package controllers;
+
+import play.*;
+import play.data.validation.Valid;
+import play.i18n.Messages;
+import play.mvc.*;
+import play.mvc.Scope.Flash;
+
+import java.util.*;
+
+import models.*;
+
+public class Application extends Controller {
+
+	public static void index() {
+		render();
+	}
+
+	public static void login(User user) {
+		if (User.connect(user.email, user.password))
+			Admin.main();
+		else {
+			flash.error(Messages.get("erro.login"), user);
+			Application.index();
+		}
+	}
+
+	public static void main() {
+		render();
+	}
+	
+	public static void cadastro(){		
+		render();
+	}
+
+	public static void cadastroSubmit(@Valid User user) {
+		if (validation.hasErrors()) {
+			params.flash();
+			validation.keep();			
+			Application.cadastro();
+		} else {
+			user.save();
+			flash.success("cadastro.sucesso", user);
+			Application.index();
+		}
+
+	}
+
+}
