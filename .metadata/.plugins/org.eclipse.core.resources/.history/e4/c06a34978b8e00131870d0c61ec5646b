@@ -1,0 +1,38 @@
+#{extends 'Secure/layout.html' /}
+
+<div id="login">
+	
+	<h1>&{'secure.title'}</h1>
+		
+	#{form @cadastroSubmit()}
+	
+		#{if flash.error}
+			<p class="error">
+				&{flash.error}
+			</p>
+		#{/if}
+		#{if flash.success}
+			<p class="success">
+				&{flash.success}
+			</p>
+		#{/if}
+	
+		<p id="username-field">
+			<label for="email">&{'secure.username'}</label>
+			<input type="text" name="user.email" id="email" value="${flash.username}" />
+			#{ifErrors} 
+					#{ifError 'user.email'}<span class="error">#{error 'user.email' /}</span>#{/if}				
+			#{/ifErrors}
+		</p>
+		<p id="password-field">
+			<label for="password">&{'secure.password'}</label>
+			<input type="password" name="user.password" id="password" value="" />
+			#{ifErrors}  
+				<span class="error">#{error 'user.password' /}</span>
+			#{/ifErrors}
+		</p>		
+		<p id="signin-field">
+			<input type="submit" id="signin" value="&{'inserir'}" />
+		</p>		
+	#{/form}
+</div>

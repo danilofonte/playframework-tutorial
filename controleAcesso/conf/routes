@@ -32,3 +32,5 @@ GET     /cadastro                               Application.cadastro
 # Import Secure routes
 */                                       		module:secure
 
+# Import CRUD routes
+*      /admin              module:crud

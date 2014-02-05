@@ -1,0 +1,78 @@
+package unit;
+
+import java.util.List;
+
+import models.Book;
+import models.User;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import play.test.Fixtures;
+import play.test.UnitTest;
+import utils.BookFactory;
+import utils.UserFactory;
+
+public class UserTest extends UnitTest {
+
+	@BeforeClass
+	public static void beforeClass() {		
+		Fixtures.delete(User.class);		
+	}
+	
+	@Test
+	public void naoDeveSalvarSemEmail() {		
+		assertFalse(UserFactory.userSemEmail().validateAndSave());
+	}
+	
+	@Test
+	public void naoDeveSalvarSemSenha() {		
+		assertFalse(UserFactory.userSemSenha().validateAndSave());
+	}
+	
+	@Test
+	public void deveSalvar() {
+
+		User usuario = UserFactory.outroUserValido();
+		String password = usuario.password;		
+		assertTrue(usuario.validateAndSave());
+		assertNotNull(usuario.password);
+		assertFalse(password.equals(usuario.password));
+	}
+	
+	@Test
+	public void naoDeveSalvarComEmailRepetido() {		
+		User usuario = UserFactory.userValido();
+		usuario.email = "emailrecorrente@test.com";
+		assertTrue(usuario.validateAndSave());
+	}
+	
+	@Test
+	public void deveAdicionarLivro(){
+		User usuario = UserFactory.userValido();
+		usuario.save();
+		usuario.addBook(BookFactory.novoLivro(usuario));
+		
+		List<Book> books = Book.find("byOwner", usuario).fetch();
+		assertEquals(1, books.size());
+	}
+	
+	
+	@Test
+	public void naoDeveAutenticarComEmailInexixtente() {
+		
+		assertFalse(User.connect("emailerrado@gmail.com", "123456"));
+	}
+	
+	@Test
+	public void naoDeveAutenticarComSenhaIncorreta() {
+		
+		assertFalse(User.connect(UserFactory.userValido().email, "senhaErrada"));
+	}
+	
+	@Test
+	public void deveAutenticar() {		
+		assertTrue(User.connect(UserFactory.userValido().email,UserFactory.userValido().password));
+	}	
+	
+}

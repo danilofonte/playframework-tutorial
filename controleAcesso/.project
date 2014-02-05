@@ -18,5 +18,8 @@
 	<linkedResources><link><name>secure</name><type>2</type><location>/home/danilo/play-1.2.7/modules/secure/app</location></link>
 <link><name>conf/secure</name><type>2</type><location>/home/danilo/play-1.2.7/modules/secure/conf</location></link>
 <link><name>public/secure</name><type>2</type><location>/home/danilo/play-1.2.7/modules/secure/public</location></link>
+<link><name>crud</name><type>2</type><location>/home/danilo/play-1.2.7/modules/crud/app</location></link>
+<link><name>conf/crud</name><type>2</type><location>/home/danilo/play-1.2.7/modules/crud/conf</location></link>
+<link><name>public/crud</name><type>2</type><location>/home/danilo/play-1.2.7/modules/crud/public</location></link>
 </linkedResources>
 </projectDescription>

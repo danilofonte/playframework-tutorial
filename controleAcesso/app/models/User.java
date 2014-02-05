@@ -1,6 +1,11 @@
 package models;
 
+import java.util.Set;
+import java.util.TreeSet;
+
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
 
 import org.mindrot.jbcrypt.BCrypt;
 
@@ -14,13 +19,16 @@ import play.i18n.Messages;
 @Entity
 public class User extends Model {
 	
-	@Required(message = "&{'email.required'}")
-	@Email(message = "&{'email.valido'}")	
+	@Required
+	@Email
 	@CheckWith(EmailNotEquals.class)
 	public String email;
 	
-	@Required(message = "&{'password.required'}")
+	@Required
 	public String password;	
+	
+	@OneToMany(fetch=FetchType.LAZY)
+	public Set<Book> books;
 	
 	public User() {
 		
@@ -30,6 +38,7 @@ public class User extends Model {
 		super();
 		this.email = email;
 		this.password = password;
+		this.books = new TreeSet<Book>();
 	}
 
 	public static boolean connect(String email, String password){		
@@ -52,10 +61,16 @@ public class User extends Model {
 		}
 	}
 	
-	public User save() {
-		
+	public User save() {		
 		this.password = BCrypt.hashpw(this.password, BCrypt.gensalt());
 		return super.save();
+	}
+	
+	public void addBook(Book book){
+		book.owner = this;
+		book.save();
+		books.add(book);
+		save();
 	}
 
 }

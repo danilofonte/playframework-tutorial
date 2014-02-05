@@ -13,7 +13,7 @@ import models.*;
 public class Application extends Controller {
 
 	public static void index() {
-		render();
+		redirect("/Secure/login");
 	}
 	
 	public static void login() {
@@ -39,6 +39,7 @@ public class Application extends Controller {
 			flash.success("cadastro.sucesso", user);
 			redirect("/Secure/login");
 		}
+		render(user);
 
 	}
 

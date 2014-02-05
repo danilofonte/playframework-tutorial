@@ -1,5 +1,8 @@
 package unit;
 
+import java.util.List;
+
+import models.Book;
 import models.User;
 
 import org.junit.BeforeClass;
@@ -7,13 +10,14 @@ import org.junit.Test;
 
 import play.test.Fixtures;
 import play.test.UnitTest;
+import utils.BookFactory;
 import utils.UserFactory;
 
 public class UserTest extends UnitTest {
 
 	@BeforeClass
 	public static void beforeClass() {		
-		Fixtures.delete(User.class);		
+		Fixtures.deleteAll();		
 	}
 	
 	@Test
@@ -37,11 +41,21 @@ public class UserTest extends UnitTest {
 	}
 	
 	@Test
-	public void naoDeveSalvarComEmailRepetido() {
-		
+	public void naoDeveSalvarComEmailRepetido() {		
 		User usuario = UserFactory.userValido();
 		usuario.email = "emailrecorrente@test.com";
 		assertTrue(usuario.validateAndSave());
+	}
+	
+	@Test
+	public void deveAdicionarLivro(){
+		User usuario = UserFactory.userValido();
+		usuario.email = "usuariolivro@livro.com.br";
+		usuario.validateAndSave();
+		usuario.addBook(BookFactory.novoLivro(usuario));
+		
+		List<Book> books = Book.find("byOwner", usuario).fetch();
+		assertEquals(1, books.size());
 	}
 	
 	

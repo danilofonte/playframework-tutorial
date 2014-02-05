@@ -6,11 +6,13 @@ import play.i18n.Messages;
 public class Security extends Secure.Security {
 
 	static void onDisconnected() {
-		Application.index();
+		session.remove("username");
+		redirect("/Secure/login");
 	}
 	
 	static void onDisconnect(){
-		Application.index();
+		session.remove("username");
+		redirect("/Secure/login");
 	}
 
 	public static void onAuthenticated() {
